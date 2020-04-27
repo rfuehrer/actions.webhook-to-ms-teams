@@ -18,8 +18,9 @@ This actions sends a message to your Microsoft Teams channel using an Incoming W
 
 ```
 - name: Send message to ms teams
-  uses: dhollerbach/github-action-send-message-to-ms-teams@1.0.10
+  uses: rfuehrer/actions-to-ms-teams@head
   with:
-    webhook: 'https://outlook.office.com/webhook/<some_giant_id>'
-    message: 'W00t it werked!'
+    webhook: '${{ secrets.<SECRET_VAR_NAME> }}'
+    message: 'Webhook messages is working!'
 ```
+<SECRET_VAR_NAME> is a secret variable in your repository. Define a secret variable with the webhook URL als value and set it here as reference.
